@@ -25,7 +25,7 @@ def create_temporal_features(df):
     df["dayofmonth"] = df.index.day
 
     # Binary features
-    df["is_weekend"] = df.index.dayofweek >= 5  # Saturday (5) and Sunday (6)
+    df["is_weekend"] = df.index.dayofweek == 5  # Saturday only (Nepal weekend)
     df["is_friday"] = df.index.dayofweek == 4
     df["is_month_start"] = df.index.is_month_start
     df["is_month_end"] = df.index.is_month_end

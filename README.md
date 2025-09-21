@@ -72,24 +72,36 @@ bandwidth_predictor/
 
 ## Installation
 
-This project uses `uv` as the package manager. Ensure you have `uv` installed:
+### Prerequisites
+
+- **Python 3.11 or higher** - Required for compatibility with all dependencies
+- **Git** - For cloning the repository
+- **uv** - Modern Python package manager (faster than pip)
+
+### Setup Instructions
+
+This project uses `uv` for package management. First, ensure you have `uv` installed:
 
 ```bash
 # Install uv if not already installed
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-### Setup Environment
+Then clone and setup the project:
 
 ```bash
-# Clone or navigate to the project directory
+# Clone the repository
+git clone https://github.com/sr198/time-series.git
 cd time-series
 
-# Install dependencies using uv
+# Install dependencies and create virtual environment
 uv sync
 
 # Activate the virtual environment
+# On macOS/Linux:
 source .venv/bin/activate
+# On Windows:
+# .venv\Scripts\activate
 
 # Verify installation
 python test_structure.py
@@ -253,7 +265,7 @@ The system automatically generates time-based features:
 - `dayofmonth`: Day of month (1-31)
 
 **Binary Indicators**:
-- `is_weekend`: Saturday/Sunday flag
+- `is_weekend`: Saturday flag (Nepal weekend)
 - `is_friday`: Friday flag
 - `is_month_start/end`: Month boundary flags
 - `is_year_start/end`: Year boundary flags
