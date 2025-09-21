@@ -1,0 +1,12 @@
+# Legacy requirements.txt for pip compatibility
+# For uv users, dependencies are managed in pyproject.toml
+# Use: uv sync
+
+pandas>=2.3.2
+numpy>=2.3.2
+scikit-learn>=1.7.1
+xgboost>=3.0.5
+optuna>=4.1.0
+matplotlib>=3.10.6
+seaborn>=0.13.2
+jupyter>=1.1.0
