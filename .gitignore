@@ -29,7 +29,7 @@ Thumbs.db
 *.csv
 *.xlsx
 *.json
-data/
+sample_data/
 datasets/
 
 # Model files
